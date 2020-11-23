@@ -9,6 +9,7 @@ import CardsCateIsHair from '../components/CardsCateIsHair'
 import CardsCateIsBeard from '../components/CardsCateIsBeard'
 import '../styles/shops.scss' 
 import { ButtonToolbar,ButtonGroup,Button,Dropdown } from 'react-bootstrap'
+import { FaTh, FaThList } from "react-icons/fa";
 
 function ShopList(props) {
   console.log('Shoplist', props)
@@ -50,7 +51,7 @@ function ShopList(props) {
                 <a src="" 
                 className="moreSorts d-flex align-items-center" 
                 onClick={()=>console.log('hi')}>
-                  更多
+                  + 
                 </a>
                 {/* <InputGroup>
                   <InputGroup.Prepend>
@@ -66,9 +67,12 @@ function ShopList(props) {
               </ButtonToolbar>
             </div>
             <div className="sorts col justify-content-end">
+              <FaTh className="mr-1 faTh" style={{color:"#a69981"}}/>
+              <FaThList className="faThList"/>
+              {/* <button className="sort mt-0">test</button> */}
               <select className="sort m-1">
+                <option value="小編精選">小編精選</option>
                 <option value="熱門排行">熱門排行</option>
-                <option value="近期活動">近期活動</option>
                 {/* <option value="價格高低">價格高低</option> */}
               </select>
             </div>

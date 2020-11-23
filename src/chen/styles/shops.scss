@@ -12,7 +12,7 @@
     .sorting nav{
       display: none;
     }
-    
+
     .sorts{
       margin: 10px;
       justify-content: center;
@@ -87,6 +87,7 @@
   .sorting{
     display: flex;
     flex-direction: row;
+    margin-bottom: 6px;
   }
 
   .breadcrumb-item,
@@ -108,6 +109,10 @@
     z-index: -1;
   }
 
+  // .btn-group{
+  //   height: 20px;
+  // }
+
   .btn-secondary:not(:disabled):not(.disabled).active{
     border: none;
     background-color: #a69981;
@@ -117,6 +122,10 @@
   //   background-color: #a69981;
   //   // border: none;
   // }
+
+  .btn-toolbar{
+    margin: 4px;
+  }
 
   .breadcrumb-item a,
   .sort>option,
@@ -163,6 +172,12 @@
     background-color: transparent;
     text-decoration: underline;
     color:#44494a;
+    cursor: pointer;
+  }
+
+  .faTh:hover,
+  .faThList:hover{
+    color: #a69981;
     cursor: pointer;
   }
 
@@ -224,6 +239,38 @@
   // .heartsValue{
   //   font-size: 16px;
   // }
+
+  .hotshop {
+    margin: 80px auto;
+    width: 300px;
+  }
+  
+  .hotshop>p {
+    font-size: 85%;
+    position: relative;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+    // background: #01ADEF;
+    // background: rgb(242, 93, 80);
+    background: #595452;
+    margin-bottom: -50px;
+    margin-left: -7px;
+    width: 30%;
+  }
+  
+  .hotshop>p:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: 100%;
+    left: 0;
+    // border-bottom: 5px solid #0299d2;
+    // border-bottom: 5px solid rgb(242, 93, 80);
+    border-bottom: 5px solid #595452;
+    border-left: 7px solid transparent;
+  }
 
   div.d-flex.justofy-content-center.mb-5.scrollRight.recommends{
     justify-content: center;
@@ -341,6 +388,8 @@
   // 共用: 麵包削
   .breadcrumb {
     background-color: transparent;
+    padding-left: .5rem;
+    margin-bottom: 12px;
   }
 
   // 共用: 標籤

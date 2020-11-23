@@ -34,12 +34,19 @@ function Cards(props) {
     getShopsFromServer()
   },[])
 
+  const none =(<span></span>)
+
   const display=(
   <>
     {shops.map((value, index)=>{
       return(
       <div className="col-12 col-sm-6 col-md-6 col-lg-4 p-0" key={index}>
         <div className="shopcard" key={value.shop_id}>
+        {console.log(value.sid)}
+        <span className={`${value.sid<4? 'hotshop':'none'}`}>
+          <p>小編精選</p>
+        </span>
+        {/* {`${value.sid<4? hotshops:'no'}`} */}
         {/* <div className="card-img-top"> */}
         {/* <div className="w-100 shopcard-top"> */}
           <Link
@@ -88,7 +95,10 @@ function Cards(props) {
   </>)
 
   return (
-    <>{display}</>
+    <>
+    {/* {hotshops} */}
+    {/* {`${true? hotshops:''}`} */}
+    {display}</>
   )
 }
 
